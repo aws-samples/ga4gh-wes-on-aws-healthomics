@@ -1,0 +1,5 @@
+#set($response = $input.path('$.body'))
+
+{"task_logs": $response.items,
+ "next_page_token": "$response.nextToken"
+}

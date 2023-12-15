@@ -1,0 +1,6 @@
+#set($inputRoot = $input.path('$'))
+
+{
+    "maxResults": "$input.params('page_size')",
+    "startingToken": "$input.params('page_token')"
+}

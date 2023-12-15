@@ -1,0 +1,4 @@
+#set($inputRoot = $input.path('$'))
+{
+  "body": "$util.escapeJavaScript($input.json('$'))"
+}

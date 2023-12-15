@@ -1,0 +1,14 @@
+#set($response = $input.path('$.body'))
+
+{
+    "runs": [
+        #foreach($item in $response.items)
+            {
+                "run_id": "$item.id",
+                "state": "$item.status",
+            }
+            #if($foreach.hasNext ) , #end
+    #end
+    ]
+
+}

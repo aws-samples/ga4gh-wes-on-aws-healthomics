@@ -1,0 +1,5 @@
+#set($response = $util.parseJson($input.path('$.errorMessage')))
+
+{
+    "msg": $response.body
+}

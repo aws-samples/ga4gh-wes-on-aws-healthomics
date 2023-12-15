@@ -1,0 +1,5 @@
+#set($inputRoot = $input.path('$'))
+{
+    "id": "$input.params('run_id')",
+    "taskId": "$input.params('task_id')"
+}

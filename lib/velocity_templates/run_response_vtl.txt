@@ -1,0 +1,16 @@
+#set($response = $input.path('$.body'))
+
+{
+  "run_id": "$response.id",
+  "request": {
+    "workflow_params": "$response.parameters",
+    "workflow_type": "$response.workflowType"
+  },
+  "state": "$response.status",
+  "run_log": {
+    "name": "/aws/omics/WorkflowLog/run/$response.id",
+    "start_time": "$response.startTime"
+  },
+  "task_logs": [],
+  "task_logs_url": "/runs/{run_id}/tasks"
+}

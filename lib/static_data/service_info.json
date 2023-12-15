@@ -1,0 +1,68 @@
+{
+  "status": 200,
+  "id": "org.ga4gh.myservice",
+  "name": "My project",
+  "type": {
+    "group": "org.ga4gh",
+    "artifact": "beacon",
+    "version": "1.0.0"
+  },
+  "description": "This service is compatible with Workflow Execution Service GA4GH api. It provides aprovides a standard way for users \n to submit workflow requests to Amazon Omics, and to monitor their execution.",
+  "organization": {
+    "name": "My organization",
+    "url": "https://example.com"
+  },
+  "contactUrl": "mailto:support@example.com",
+  "documentationUrl": "https://docs.myservice.example.com",
+  "createdAt": "2019-06-04T12:58:19Z",
+  "updatedAt": "2019-06-04T12:58:19Z",
+  "environment": "test",
+  "version": "1.0.0",
+  "workflow_type_versions": {
+    "WDL": {
+      "workflow_type_version": [
+        "1.0",
+        "1.1"
+      ]
+    },
+    "Nextflow": {
+      "workflow_type_version": [
+        "v22.04.0"
+      ]
+    },
+    "CWL": {
+      "workflow_type_version": [
+        "1.0",
+        "1.1",
+        "1.2"
+      ]
+    }
+  },
+  "supported_wes_versions": [
+    "1.0.1"
+  ],
+  "supported_filesystem_protocols": [
+    "S3, Omics sequence store"
+  ],
+  "workflow_engine_versions": {
+    "property1": "string",
+    "property2": "string"
+  },
+  "default_workflow_engine_parameters": [
+    {
+      "name": "string",
+      "type": "string",
+      "default_value": "string"
+    }
+  ],
+  "system_state_counts": {
+    "property1": 0,
+    "property2": 0
+  },
+  "auth_instructions_url": "1. Create IAM user in the console (with MFA enabled) and add them to usergroup 'omicsapiusers'\n 2. From aws cli, call sts with the get-session-token command\n3. Create session variables for AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY_ID, and AWS_SESSION_TOKEN values from the above response\n4. Call API with —aws-sigv4 flag",
+  "tags": {
+    "property1": "string",
+    "property2": "string"
+  }
+}
+}

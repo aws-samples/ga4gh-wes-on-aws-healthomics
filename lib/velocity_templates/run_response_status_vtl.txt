@@ -1,0 +1,6 @@
+#set($response = $input.path('$.body'))
+
+{
+  "run_id": "$response.id",
+  "state": "$response.status"
+}

@@ -1,0 +1,14 @@
+#set($response = $input.path('$.body'))
+
+{
+    "id": "$response.taskId",
+    "name": "$response.name",
+    "status": "$response.status",
+    "start_time": "$response.startTime",
+    "end_time": "$response.stopTime",
+    "system_logs": [
+        "/aws/omics/WorkflowLog/run/$input.params('run_id')/tasks/$response.taskId"
+    ],
+    "stderr": "$response.failureReason"
+
+}
