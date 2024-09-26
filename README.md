@@ -17,7 +17,17 @@ In order to migrate GA4GH WES compliant pipelines, this CDK package will deploy 
 To get started with this stack, follow these instructions...
 
 1. Identify, or create, the necessary S3 buckets for storing inputs and outputs of your workflows.
-2. Update the lib/config/data-locations.json file with the locations of these buckets.
+2. Update the `lib/config/data-locations.json` file with the locations of these buckets.
+
+Example of `lib/config/data-locations.json` file
+
+```
+{
+    "output_bucket_uri": "<s3 bucket output uri>,
+    "source_uris": [  "<s3 bucket source uri>",.. ]
+}
+```
+
 3. Install and configure the AWS CDK tooling (https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html)
 4. Deploy the stack using `cdk deploy`
 5. The stack will create an IAM groupcalled `omicsapiusers` to protect the endpoints. Add your IAM user(s) to this group so they can access the API.
